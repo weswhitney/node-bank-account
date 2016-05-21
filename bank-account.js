@@ -2,19 +2,20 @@ var account = {
     balance: 0
 };
 
-var deposit = function(account, amount) {
-    account.balance = account.balance + amount;
-    console.log(account.balance);
-    return account.balance;
-};
+function deposit(account, amount) {
+    account.balance += amount;
+}
 
-var withdraw = function(account, amount) {
-    account.balance = account.balance - amount;
-    console.log(account.balance);
-    return account.balance;
-};
+function withdraw(account, amount) {
+    account.balance -= amount;
+}
 
-var getBalance = function(account) {
-    console.log(account.balance);
+function getBalance(account) {
     return account.balance;
-};
+}
+
+deposit(account, 1000);
+
+withdraw(account, 500);
+
+console.log(getBalance(account));
