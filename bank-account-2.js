@@ -1,21 +1,18 @@
 var accounts = [];
 
-var account = {
-    balance: 100,
-    username: 'weswhitney'
-};
-
 function createAccount(account) {
     accounts.push(account);
     return account;
 }
 
 function getAccount(username) {
-    accounts.forEach(function() {
+    var matchedAccount;
+    accounts.forEach(function(account) {
         if (username === account.username) {
-            return username;
+            matchedAccount = account;
         }
     });
+    return matchedAccount;
 }
 
 function deposit(account, amount) {
@@ -29,3 +26,8 @@ function withdraw(account, amount) {
 function getBalance(account) {
     return account.balance;
 }
+
+var wesAccount = createAccount({
+    balance: 0,
+    username: 'weswhitney'
+});
