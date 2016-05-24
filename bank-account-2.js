@@ -1,18 +1,22 @@
 var accounts = [];
 
-// Account Object
-// balance
-// username
+var account = {
+    balance: 100,
+    username: 'weswhitney'
+};
 
+function createAccount(account) {
+    accounts.push(account);
+    return account;
+}
 
-
-// createAccount(account)
-// push onto accounts array
-// return account
-
-// getAccount(username)
-// find matching account using forEach
-
+function getAccount(username) {
+    accounts.forEach(function() {
+        if (username === account.username) {
+            return username;
+        }
+    });
+}
 
 function deposit(account, amount) {
     account.balance += amount;
