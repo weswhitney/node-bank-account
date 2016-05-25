@@ -26,8 +26,3 @@ function withdraw(account, amount) {
 function getBalance(account) {
     return account.balance;
 }
-
-var wesAccount = createAccount({
-    balance: 0,
-    username: 'weswhitney'
-});
