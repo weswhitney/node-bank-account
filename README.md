@@ -1,3 +1,3 @@
 # node-bank-account
 
-node tutorial im working on from udemy.com
+my code for a node tutorial im working on from udemy.com
